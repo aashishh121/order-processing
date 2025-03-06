@@ -19,13 +19,6 @@
 # Setup Instructions
 
     Clone this repository and navigate to the project directory:
-
-        To interact with AWS services in this application, the following environment variables are required:
-
-
-
-        Make sure to configure these environment variables in your development environment before running the application to successfully interact with AWS services.
-
     Run below command in terminal
         docker-compose up -d
         npm install
