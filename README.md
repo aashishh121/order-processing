@@ -56,3 +56,6 @@ The application will be available at http://localhost:5000.
       │── services/
       │── types/
       │── utils/
+
+# Need Help?
+For any issues, feel free to create an issue in the repository or reach out to aashishkumargh@gmail.com.
