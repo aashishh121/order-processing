@@ -1,0 +1,18 @@
+const dotenv = require("dotenv");
+dotenv.config();
+
+export const envConfig = {
+  PORT: process.env.PORT,
+  MONGODB_URL: process.env.MONGODB_URL,
+  ACCESS_TOKEN_SECRET: process.env.ACCESS_TOKEN_SECRET,
+  REFRESH_TOKEN_SECRET: process.env.REFRESH_TOKEN_SECRET,
+  ACCESS_TOKEN_EXPIRESIN: process.env.ACCESS_TOKEN_EXPIRESIN,
+  REFRESH_TOKEN_EXPIRESIN: process.env.REFRESH_TOKEN_EXPIRESIN,
+  AWS_ENDPOINT: process.env.AWS_ENDPOINT,
+  REDIS_ENDPOINT: process.env.REDIS_ENDPOINT,
+  AWS_SQS_QUEUE_NAME: process.env.AWS_SQS_QUEUE_NAME,
+  AWS_DLQ_QUEUE_NAME: process.env.AWS_DLQ_QUEUE_NAME,
+  AWS_SES_EMAIL_ADDRESS: process.env.AWS_SES_EMAIL_ADDRESS,
+  AWS_SES_ACCESS_KEY: process.env.AWS_SES_ACCESS_KEY,
+  AWS_SES_SECRET_KEY: process.env.AWS_SES_SECRET_KEY,
+};

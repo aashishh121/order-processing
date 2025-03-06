@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "7bba4dbc-aa59-45db-949d-9ba5200c51e2",
+		"name": "Inventory Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22423919"
+	},
+	"item": [
+		{
+			"name": "Get Order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/orders/{{orderId}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"orders",
+						"{{orderId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Placed Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n  \"userId\": \"e422581e-9564-4658-9c04-cb54fdff3ddd\",\r\n  \"items\": [\r\n    {\r\n      \"productId\": \"abc123\",\r\n      \"quantity\": 5\r\n    }\r\n  ],\r\n  \"totalAmount\": 10\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/orders/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Abcd\",\r\n  \"lastName\": \"kumar\",\r\n  \"email\": \"abcd123@example.com\",\r\n  \"password\": \"Testing123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/auth/register",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"abcd12@example.com\",\r\n  \"password\": \"Testing123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/auth/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Access Token From Refresh Token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzgwYWVmOTJiZDY3YzY5MjQ3Nzc0NSIsImVtYWlsIjoiYWJjZDEyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzQxMjY5MzkwLCJleHAiOjE3NDEzNTU3OTB9.C-LeZ0BpOVgZc8fFAq8AWtjSm4t2t8rxT3RaRTqB6a4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/auth/refresh",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzgwYWVmOTJiZDY3YzY5MjQ3Nzc0NSIsImVtYWlsIjoiYWJjZDEyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzQxMjY5MzkwLCJleHAiOjE3NDEyNzI5OTB9.lThOamCq4d8BA95HDVr-fUCfDFumEVn8FvWOb12-lVQ",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "orderId",
+			"value": "a398842a-945b-42a3-a5a4-a324d670bf6c",
+			"type": "default"
+		},
+		{
+			"key": "base_url",
+			"value": "http://localhost:5000",
+			"type": "default"
+		}
+	]
+}

@@ -1,0 +1,6 @@
+node_modules
+.gitignore
+.dockerignore
+README.md
+
+/logs
